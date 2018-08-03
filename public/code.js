@@ -4,16 +4,16 @@
   var results = document.getElementById("results");
   var certain = document.getElementById("certain");
   submit.addEventListener("click", function() {
+    while (results.hasChildNodes()) {
+      results.removeChild(results.firstChild);
+    }
     var url = "/search?s=" + search_term.value;
-    if (certain.value) {
+    if (certain.checked) {
       url += "&certain=yes";
     }
     fetch(url, { method: "get" })
       .then(function(r) { return r.json() })
       .then(function(j) {
-        while (results.hasChildNodes()) {
-          results.removeChild(results.firstChild);
-        }
         j.forEach(function(e) {
           var tr = document.createElement("tr");
           var td = document.createElement("td");
