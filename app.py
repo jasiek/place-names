@@ -9,7 +9,7 @@ with open("data/pl.txt") as f:
 @app.route('/search')
 def search():
   results = sorted(places, key=lambda p: distance(p.lower(), request.args.get('s')))
-  return jsonify(results[:100])
+  return jsonify(results[:30])
 
 @app.route('/<path:path>')
 def serve_static(path):

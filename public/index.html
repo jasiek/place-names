@@ -20,26 +20,34 @@
     </section>
     <section class="section">
       <div class="container">
-        <form action="/search">
-          <div class="field has-addons">
-            <div class="control">
-              <span class="select">
-                <select>
-                  <option>Poland</option>
-                </select>
-              </span>
-            </div>
-            <div class="control is-expanded">
-              <input class="input" type="text" name="s" placeholder="Search place names">
-            </div>
-            <div class="control">
-              <a class="button is-primary">
-                Search
-              </a>
-            </div>
+        <div class="field has-addons">
+          <div class="control">
+            <span class="select">
+              <select>
+                <option>Poland</option>
+              </select>
+            </span>
           </div>
-        </form>
+          <div class="control is-expanded">
+            <input class="input" type="text" name="s" placeholder="Search place names" id="s">
+          </div>
+          <div class="control">
+            <a class="button is-primary" id="submit">
+              Search
+            </a>
+          </div>
+        </div>
       </div>
     </section>
+    <section class="section">
+      <div class="container">
+        <table>
+          <tbody id="results">
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="code.js">
+    </script>
   </body>
 </html>
