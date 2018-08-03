@@ -18,43 +18,39 @@
         </p>
       </div>
     </section>
-    <section class="section">
-      <div class="container">
-        <div class="field has-addons">
-          <div class="control">
-            <span class="select">
-              <select>
-                <option>Poland</option>
-              </select>
-            </span>
-          </div>
-          <div class="control is-expanded">
-            <input class="input" type="text" name="s" placeholder="Search place names" id="s">
-          </div>
-          <div class="control">
-            <a class="button is-primary" id="submit">
-              Search
-            </a>
-          </div>
-        </div>
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox" id="certain" name="certain" value="1">
-              Certain of first letter
-            </label>
-          </div>
+    <div class="container">
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" id="certain" name="certain" value="1">
+            I am certain of the first letter
+          </label>
         </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <table>
-          <tbody id="results">
-          </tbody>
-        </table>
+      <div class="field has-addons">
+        <div class="control">
+          <span class="select">
+            <select>
+              <option>Poland</option>
+            </select>
+          </span>
+        </div>
+        <div class="control is-expanded">
+          <input class="input" type="text" name="s" placeholder="Search place names" id="s">
+        </div>
+        <div class="control">
+          <button class="button is-primary" id="submit">
+            Search
+          </button>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="container">
+      <table>
+        <tbody id="results">
+        </tbody>
+      </table>
+    </div>
     <script src="code.js">
     </script>
   </body>

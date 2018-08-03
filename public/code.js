@@ -3,7 +3,7 @@
   var submit = document.getElementById("submit");
   var results = document.getElementById("results");
   var certain = document.getElementById("certain");
-  submit.addEventListener("click", function() {
+  var do_search = function() {
     while (results.hasChildNodes()) {
       results.removeChild(results.firstChild);
     }
@@ -23,5 +23,10 @@
           results.appendChild(tr);
         });
       })
+  }
+
+  search_term.addEventListener("keyup", function(e) {
+    if (e.keyCode == 13) do_search();
   });
+  submit.addEventListener("click", do_search);
 })();
