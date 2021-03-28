@@ -10,6 +10,7 @@ COPY requirements.txt ./
 COPY --from=builder /tmp/wheelhouse /tmp/wheelhouse
 RUN pip install --no-cache-dir --find-links=/tmp/wheelhouse -r requirements.txt
 COPY . .
+EXPOSE 8000
 CMD ["gunicorn", "app:app"]
 
 
