@@ -29,4 +29,4 @@ def serve_index():
   return serve_static('index.html')
 
 if __name__ == '__main__':
-  app.run(debug=True, use_reloader=True)
+  app.run()
